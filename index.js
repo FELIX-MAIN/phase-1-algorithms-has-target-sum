@@ -1,6 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+    const compare = [...array];
+  
+    for (const element of array) {
+      const von = target - element;
+      if (von in compare) return true;
+      compare[element] = true;
+    }
+  
+    return false;
+  }
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +17,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  //create a funtion that allows two parameters, an array and a target integer
+  //create an array that acts as a container
 */
 
 /*
